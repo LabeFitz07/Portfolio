@@ -1,0 +1,45 @@
+:root {
+  --bg: #07111f;
+  --bg-soft: #0f1f33;
+  --panel: rgba(10, 21, 38, 0.72);
+  --panel-strong: rgba(14, 29, 50, 0.9);
+  --text: #f4efe7;
+  --muted: #b8c2cf;
+  --line: rgba(255, 255, 255, 0.1);
+  --accent: #ff7a18;
+  --accent-soft: #ffd08a;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 24, 0.22), transparent 30%),
+    radial-gradient(circle at 85% 15%, rgba(119, 196, 255, 0.14), transparent 20%),
+    linear-gradient(160deg, #07111f 0%, #0d2034 52%, #091521 100%);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(255, 122, 24, 0.35);
+}
