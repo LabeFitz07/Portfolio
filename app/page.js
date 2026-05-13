@@ -49,43 +49,58 @@ const projects = [
 ];
 
 const highlights = [
-  "BS Information Technology student building practical and visually strong interfaces.",
-  "Interested in frontend development, responsive design, and mobile app experiences.",
-  "Focused on improving through real projects, iteration, and consistent hands-on work.",
+  "BS Information Technology student focused on frontend development and interface building.",
+  "Comfortable turning ideas into responsive pages with clean layout, structure, and styling.",
+  "Still growing, but already building with a practical mindset and consistent hands-on work.",
 ];
 
 const proofItems = [
-  "Open to new opportunities",
-  "Travel-minded builder",
-  "Next.js focused",
-  "Flutter explorer",
-  "Design minded developer",
-  "Adaptable collaborator",
-  "Project driven growth",
+  "Frontend development",
+  "Responsive UI",
+  "Next.js projects",
+  "React interfaces",
+  "Mobile-friendly builds",
+  "Design-aware coding",
+  "Continuous improvement",
 ];
 
 const processSteps = [
   {
     step: "01",
-    title: "Explore new places",
-    text: "I want my portfolio to show movement, curiosity, and a mindset that is open to new environments.",
+    title: "Understand the goal",
+    text: "I start by identifying what the page or feature needs to communicate so the design is not only attractive, but also useful.",
   },
   {
     step: "02",
-    title: "Meet new challenges",
-    text: "Whether the opportunity is web, mobile, or design-heavy frontend work, I want to keep growing through real projects.",
+    title: "Build with structure",
+    text: "I organize layouts carefully, write readable code, and focus on responsive behavior so the experience works across screen sizes.",
   },
   {
     step: "03",
-    title: "Build wherever I go",
-    text: "The goal is to become a developer whose work can travel well: clear, useful, and ready for different teams and ideas.",
+    title: "Refine the experience",
+    text: "I pay attention to polish, visual clarity, and small interactions that make a project feel more thoughtful and complete.",
   },
 ];
 
-const opportunityZones = [
-  "Remote-first product teams",
-  "Creative frontend internships",
-  "Startup environments with room to learn",
+const capabilityPoints = [
+  "Responsive landing pages and portfolio sites",
+  "UI implementation from idea to polished screen",
+  "Student and personal projects with practical structure",
+];
+
+const reviewerNotes = [
+  {
+    label: "Main focus",
+    value: "Frontend development with React and Next.js",
+  },
+  {
+    label: "Working style",
+    value: "Design-aware, detail-focused, and eager to improve fast",
+  },
+  {
+    label: "What I bring",
+    value: "Clear layouts, usable interfaces, and genuine curiosity to learn",
+  },
 ];
 
 export default function Home() {
@@ -108,15 +123,16 @@ export default function Home() {
 
       <section id="home" className={styles.hero}>
         <div className={styles.heroCopy}>
-          <span className={styles.eyebrow}>Frontend Developer Portfolio</span>
+          <span className={styles.eyebrow}>Frontend Developer • IT Student • Builder</span>
           <h1>
-            Modern portfolio, clear design, and a stronger first impression.
+            I build clean, responsive interfaces that make ideas easier to use.
           </h1>
           <p className={styles.lead}>
-            I&apos;m Fitz Gerard Labe, an IT student from Cagayan de Oro
-            creating web and mobile experiences that are simple to use,
-            visually sharp, and shaped by a desire to explore new places and
-            new opportunities.
+            I&apos;m Fitz Gerard Labe from Cagayan de Oro, a BS Information
+            Technology student who enjoys building websites and interface
+            concepts with React, Next.js, and a strong eye for layout. I care
+            about code that works well, looks polished, and feels human to the
+            people using it.
           </p>
 
           <div className={styles.heroActions}>
@@ -139,20 +155,21 @@ export default function Home() {
               <span>core tools</span>
             </div>
             <div>
-              <strong>2024</strong>
-              <span>portfolio refresh</span>
+              <strong>UI</strong>
+              <span>clarity first</span>
             </div>
           </div>
         </div>
 
         <div className={styles.heroVisual}>
           <div className={styles.photoStage}>
+            <div className={styles.orbitLine} />
             <div className={styles.photoHalo} />
             <div className={styles.photoCardShell}>
               <div className={styles.photoTopLabel}>Portfolio Profile</div>
               <div className={styles.photoFrame}>
                 <Image
-                  src="/assets/me.5.jpg"
+                  src="/assets/mypic (2).png"
                   alt="Portrait of Fitz Gerard Labe"
                   width={560}
                   height={700}
@@ -161,10 +178,12 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className={styles.photoBadge}>Open to opportunity</div>
+            <div className={styles.photoBadge}>Open to internships and real-world projects</div>
+            <div className={styles.floatingChipOne}>Responsive UI</div>
+            <div className={styles.floatingChipTwo}>React + Next.js</div>
             <div className={styles.photoInfoCard}>
-              <span>Current direction</span>
-              <strong>Creative frontend work, remote opportunities, and growth through real projects</strong>
+              <span>What I want reviewers to see</span>
+              <strong>A developer who can combine structure, design sense, and steady growth into useful digital work.</strong>
             </div>
           </div>
         </div>
@@ -183,21 +202,22 @@ export default function Home() {
       <section id="about" className={styles.section}>
         <div className={styles.sectionHeading}>
           <span>About Me</span>
-          <h2>Building a portfolio around growth, clarity, and practical work.</h2>
+          <h2>I&apos;m still growing, but I already know the kind of work I want to build.</h2>
         </div>
 
         <div className={styles.aboutGrid}>
           <article className={styles.aboutCard}>
             <p>
-              I started taking IT seriously because of the opportunities in the
-              field, but over time I developed a real interest in programming
-              itself. What keeps me engaged now is the process of learning by
-              building and improving each project.
+              I first became serious about IT because of the opportunities in
+              the field, but along the way I developed a genuine interest in
+              programming and interface creation. What keeps me engaged now is
+              the challenge of building something functional, clear, and
+              visually refined.
             </p>
             <p>
-              My current direction is frontend development. I enjoy shaping
-              interfaces, organizing content, and turning ideas into something
-              that feels polished on both desktop and mobile.
+              My current direction is frontend development. I enjoy organizing
+              content, shaping the visual flow of a page, and turning rough
+              ideas into screens that feel polished on both desktop and mobile.
             </p>
           </article>
 
@@ -214,8 +234,8 @@ export default function Home() {
 
       <section className={styles.section}>
         <div className={styles.sectionHeading}>
-          <span>Journey Mode</span>
-          <h2>This portfolio now tells a story about travel, ambition, and finding the next opportunity.</h2>
+          <span>How I Work</span>
+          <h2>My process is simple: understand the goal, build with structure, then refine the experience.</h2>
         </div>
 
         <div className={styles.processGrid}>
@@ -248,27 +268,28 @@ export default function Home() {
       <section id="projects" className={styles.section}>
         <div className={styles.sectionHeading}>
           <span>Projects</span>
-          <h2>Selected work that reflects my current style and direction.</h2>
+          <h2>These projects show how I approach design, usability, and implementation.</h2>
         </div>
 
         <article className={styles.spotlightCard}>
           <div className={styles.spotlightCopy}>
-            <span className={styles.spotlightEyebrow}>Opportunity Passport</span>
-            <h3>A featured section built around the idea of going places and chasing better work.</h3>
+            <span className={styles.spotlightEyebrow}>Capability Snapshot</span>
+            <h3>If someone reviews this portfolio, I want them to quickly understand what I can already do.</h3>
             <p>
-              Since you want the site to feel like someone ready to travel and
-              grow, this spotlight frames your portfolio less like a school
-              archive and more like a personal launchpad. It gives visitors a
-              stronger impression of ambition and direction.
+              My work is centered on frontend implementation, responsive
+              layouts, and building interfaces that feel organized and easy to
+              follow. I&apos;m especially interested in projects where I can keep
+              improving both my technical skill and my visual decision-making.
             </p>
             <div className={styles.spotlightPoints}>
-              {opportunityZones.map((zone) => (
-                <span key={zone}>{zone}</span>
+              {capabilityPoints.map((point) => (
+                <span key={point}>{point}</span>
               ))}
             </div>
           </div>
 
           <div className={styles.spotlightVisual}>
+            <div className={styles.visualPulse} />
             <div className={styles.spotlightFramePrimary}>
               <Image
                 src="/assets/Screenshot 2024-07-01 140848.png"
@@ -289,6 +310,15 @@ export default function Home() {
             </div>
           </div>
         </article>
+
+        <div className={styles.reviewerGrid}>
+          {reviewerNotes.map((note) => (
+            <article key={note.label} className={styles.reviewerCard}>
+              <span>{note.label}</span>
+              <h3>{note.value}</h3>
+            </article>
+          ))}
+        </div>
 
         <div className={styles.projectGrid}>
           {projects.map((project) => (
@@ -321,7 +351,7 @@ export default function Home() {
       <section id="contact" className={`${styles.section} ${styles.contactSection}`}>
         <div className={styles.sectionHeading}>
           <span>Contact</span>
-          <h2>If you want a developer who is still growing fast, let&apos;s talk.</h2>
+          <h2>If you need a builder with potential, discipline, and room to grow fast, let&apos;s connect.</h2>
         </div>
 
         <div className={styles.contactGrid}>

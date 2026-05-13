@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata = {
   title: "Fitz Gerard Labe | Portfolio",
-  description: "Modern frontend portfolio for Fitz Gerard Labe.",
+  description: "Portfolio of Fitz Gerard Labe, a frontend-focused IT student building clean and responsive web interfaces.",
 };
 
 export default function RootLayout({ children }) {
