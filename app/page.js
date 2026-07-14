@@ -2,17 +2,30 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import {
   FaArrowRight,
+  FaBriefcase,
+  FaClipboardCheck,
+  FaCodeBranch,
   FaCss3Alt,
   FaEnvelope,
+  FaExternalLinkAlt,
   FaFacebookSquare,
+  FaDownload,
+  FaGamepad,
   FaGithub,
+  FaHeartbeat,
   FaHtml5,
   FaJsSquare,
   FaLinkedin,
   FaMapMarkerAlt,
+  FaMoon,
   FaNodeJs,
   FaPhoneAlt,
   FaReact,
+  FaShieldAlt,
+  FaSitemap,
+  FaTasks,
+  FaUserCheck,
+  FaUsers,
 } from "react-icons/fa";
 
 const skills = [
@@ -25,6 +38,14 @@ const skills = [
 ];
 
 const projects = [
+  {
+    title: "Task Management System",
+    summary:
+      "A live management dashboard for assigning tasks, approving staff signups, organizing departments, and controlling access through Super Admin and Department Admin roles.",
+    image: "/assets/Screenshot 2024-07-01 140848.png",
+    href: "https://management-one-lime.vercel.app/",
+    tags: ["Next.js", "Admin Dashboard", "Role Management", "Light/Dark Mode"],
+  },
   {
     title: "Reviewer System",
     summary:
@@ -48,17 +69,33 @@ const projects = [
   },
 ];
 
+const gameBuildFiles = [
+  "Game Expo.exe",
+  "Game Expo_Data",
+  "UnityPlayer.dll",
+  "Mono",
+  "UnityCrashHandler64.exe",
+];
+
+const gameStoryPoints = [
+  "Built in Unity for our school Game Expo",
+  "Designed for students to play during the event",
+  "Story-driven teacher and student werewolf concept",
+];
+
 const highlights = [
-  "BS Information Technology student focused on frontend development and interface building.",
-  "Comfortable turning ideas into responsive pages with clean layout, structure, and styling.",
-  "Still growing, but already building with a practical mindset and consistent hands-on work.",
+  "BS Information Technology graduate with real healthcare system support experience.",
+  "Focused on responsive pages, clean layout, and readable interfaces.",
+  "Six months of IT staff experience across maintenance, updates, and user support.",
 ];
 
 const proofItems = [
   "Frontend development",
+  "Healthcare system experience",
   "Responsive UI",
   "Next.js projects",
   "React interfaces",
+  "System maintenance",
   "Mobile-friendly builds",
   "Design-aware coding",
   "Continuous improvement",
@@ -84,22 +121,83 @@ const processSteps = [
 
 const capabilityPoints = [
   "Responsive landing pages and portfolio sites",
+  "Healthcare system maintenance and support",
   "UI implementation from idea to polished screen",
-  "Student and personal projects with practical structure",
+  "Personal projects with practical structure",
 ];
 
 const reviewerNotes = [
   {
     label: "Main focus",
-    value: "Frontend development with React and Next.js",
+    value: "Frontend development with practical IT system experience",
   },
   {
-    label: "Working style",
-    value: "Design-aware, detail-focused, and eager to improve fast",
+    label: "Experience",
+    value: "6 months maintaining and developing a healthcare system",
   },
   {
     label: "What I bring",
-    value: "Clear layouts, usable interfaces, and genuine curiosity to learn",
+    value: "Clear layouts, reliable support, and careful system thinking",
+  },
+];
+
+const experienceHighlights = [
+  {
+    icon: FaHeartbeat,
+    title: "Healthcare System Support",
+    text: "Helped maintain a healthcare system used in day-to-day operations, with attention to reliability and clear user workflows.",
+  },
+  {
+    icon: FaCodeBranch,
+    title: "Development Tasks",
+    text: "Contributed to system improvements, fixes, and updates while learning how real users depend on working software.",
+  },
+  {
+    icon: FaClipboardCheck,
+    title: "IT Staff Responsibilities",
+    text: "Supported troubleshooting, system checking, and practical maintenance needs as part of an IT staff role for six months.",
+  },
+];
+
+const taskFeatures = [
+  "Staff approval queue",
+  "Department-specific staff",
+  "Custom job roles",
+  "Super Admin access",
+  "Department Admin access",
+  "Light and dark mode",
+];
+
+const taskMetrics = [
+  { value: "5", label: "Staff accounts" },
+  { value: "7", label: "Departments" },
+  { value: "14", label: "Roles" },
+];
+
+const taskGallery = [
+  {
+    title: "Staff Approval",
+    text: "Review new signups before users enter the workspace.",
+    icon: FaUserCheck,
+    tone: "pink",
+  },
+  {
+    title: "Departments",
+    text: "Group staff by department and keep teams organized.",
+    icon: FaSitemap,
+    tone: "cyan",
+  },
+  {
+    title: "Role Access",
+    text: "Separate Super Admin and Department Admin permissions.",
+    icon: FaShieldAlt,
+    tone: "gold",
+  },
+  {
+    title: "Light and Dark",
+    text: "Switch between two clean dashboard viewing modes.",
+    icon: FaMoon,
+    tone: "light",
   },
 ];
 
@@ -115,24 +213,24 @@ export default function Home() {
 
         <nav className={styles.nav}>
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#game">Game</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <section id="home" className={styles.hero}>
         <div className={styles.heroCopy}>
-          <span className={styles.eyebrow}>Frontend Developer • IT Student • Builder</span>
-          <h1>
-            I build clean, responsive interfaces that make ideas easier to use.
-          </h1>
+          <span className={styles.eyebrow}>Frontend Developer | IT Graduate | UI Builder</span>
+          <h1>Modern interfaces with clear structure and thoughtful polish.</h1>
           <p className={styles.lead}>
             I&apos;m Fitz Gerard Labe from Cagayan de Oro, a BS Information
-            Technology student who enjoys building websites and interface
-            concepts with React, Next.js, and a strong eye for layout. I care
-            about code that works well, looks polished, and feels human to the
-            people using it.
+            Technology graduate who builds responsive websites and interface
+            concepts with React and Next.js. My healthcare IT experience taught
+            me to design software that is clear, reliable, and useful for real
+            users.
           </p>
 
           <div className={styles.heroActions}>
@@ -147,8 +245,8 @@ export default function Home() {
 
           <div className={styles.statRow}>
             <div>
-              <strong>3+</strong>
-              <span>featured builds</span>
+              <strong>6 mo</strong>
+              <span>healthcare IT</span>
             </div>
             <div>
               <strong>6</strong>
@@ -178,12 +276,15 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className={styles.photoBadge}>Open to internships and real-world projects</div>
+            <div className={styles.photoBadge}>Frontend portfolio</div>
             <div className={styles.floatingChipOne}>Responsive UI</div>
             <div className={styles.floatingChipTwo}>React + Next.js</div>
             <div className={styles.photoInfoCard}>
               <span>What I want reviewers to see</span>
-              <strong>A developer who can combine structure, design sense, and steady growth into useful digital work.</strong>
+              <strong>
+                A developer who combines structure, visual clarity, and steady
+                improvement in every project.
+              </strong>
             </div>
           </div>
         </div>
@@ -202,22 +303,27 @@ export default function Home() {
       <section id="about" className={styles.section}>
         <div className={styles.sectionHeading}>
           <span>About Me</span>
-          <h2>I&apos;m still growing, but I already know the kind of work I want to build.</h2>
+          <h2>I build with both portfolio creativity and real system responsibility.</h2>
         </div>
 
         <div className={styles.aboutGrid}>
           <article className={styles.aboutCard}>
             <p>
               I first became serious about IT because of the opportunities in
-              the field, but along the way I developed a genuine interest in
-              programming and interface creation. What keeps me engaged now is
-              the challenge of building something functional, clear, and
-              visually refined.
+              the field. Along the way, I found a real interest in programming
+              and interface creation. What keeps me engaged now is the challenge
+              of making pages functional, clear, and visually refined.
             </p>
             <p>
               My current direction is frontend development. I enjoy organizing
-              content, shaping the visual flow of a page, and turning rough
-              ideas into screens that feel polished on both desktop and mobile.
+              content, shaping the flow of a page, and turning rough ideas into
+              screens that feel polished on both desktop and mobile.
+            </p>
+            <p>
+              I also spent six months as part of an IT staff team maintaining
+              and developing a healthcare system. That experience helped me
+              understand why clear interfaces, dependable updates, and careful
+              support matter when people use software for daily work.
             </p>
           </article>
 
@@ -229,6 +335,46 @@ export default function Home() {
               </div>
             ))}
           </aside>
+        </div>
+      </section>
+
+      <section id="experience" className={styles.section}>
+        <div className={styles.experiencePanel}>
+          <div className={styles.experienceIntro}>
+            <span className={styles.spotlightEyebrow}>Professional Experience</span>
+            <h2>IT Staff for a healthcare system</h2>
+            <p>
+              Six months of hands-on experience helping maintain and develop a
+              healthcare system. This gave me practical exposure to real users,
+              system reliability, troubleshooting, and careful updates.
+            </p>
+          </div>
+
+          <div className={styles.experienceMeta}>
+            <FaBriefcase />
+            <div>
+              <span>Role</span>
+              <strong>IT Staff</strong>
+            </div>
+            <div>
+              <span>Duration</span>
+              <strong>6 months</strong>
+            </div>
+            <div>
+              <span>Focus</span>
+              <strong>Maintenance + development</strong>
+            </div>
+          </div>
+
+          <div className={styles.experienceGrid}>
+            {experienceHighlights.map(({ icon: Icon, title, text }) => (
+              <article key={title} className={styles.experienceCard}>
+                <Icon />
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -277,9 +423,8 @@ export default function Home() {
             <h3>If someone reviews this portfolio, I want them to quickly understand what I can already do.</h3>
             <p>
               My work is centered on frontend implementation, responsive
-              layouts, and building interfaces that feel organized and easy to
-              follow. I&apos;m especially interested in projects where I can keep
-              improving both my technical skill and my visual decision-making.
+              layout, and organized interfaces. I keep improving both my
+              technical skill and my visual decision-making with every build.
             </p>
             <div className={styles.spotlightPoints}>
               {capabilityPoints.map((point) => (
@@ -320,6 +465,110 @@ export default function Home() {
           ))}
         </div>
 
+        <article className={styles.taskManagementShowcase}>
+          <div className={styles.taskShowcaseCopy}>
+            <span className={styles.spotlightEyebrow}>Live Full-Stack Project</span>
+            <h3>Task Management System</h3>
+            <p>
+              A polished admin workspace for tasks, staff accounts,
+              departments, and role-based access. It includes approval flows,
+              Super Admin and Department Admin controls, plus light and dark
+              mode for flexible dashboard use.
+            </p>
+            <div className={styles.taskFeatureGrid}>
+              {taskFeatures.map((feature) => (
+                <span key={feature}>{feature}</span>
+              ))}
+            </div>
+            <a
+              href="https://management-one-lime.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.projectLiveButton}
+            >
+              View Live Project
+              <FaExternalLinkAlt />
+            </a>
+          </div>
+
+          <div className={styles.taskProductBoard} aria-label="Task management system screen gallery">
+            <div className={styles.taskBrowserBar}>
+              <span />
+              <span />
+              <span />
+              <p>management-one-lime.vercel.app</p>
+            </div>
+
+            <div className={styles.taskPreview}>
+              <div className={styles.taskPreviewSidebar}>
+                <strong>Management Hub</strong>
+                <span className={styles.previewActive}>Overview</span>
+                <span>Workflow</span>
+                <span>Staff</span>
+                <span>Departments</span>
+                <span>Roles</span>
+              </div>
+              <div className={styles.taskPreviewMain}>
+                <div className={styles.previewTopbar}>
+                  <div>
+                    <span>Signed in</span>
+                    <strong>Super Admin</strong>
+                  </div>
+                  <mark>3 approvals</mark>
+                </div>
+                <div className={styles.previewHero}>
+                  <span>Overview</span>
+                  <strong>Staff, departments, roles, and tasks in one dashboard.</strong>
+                </div>
+                <div className={styles.previewStats}>
+                  {taskMetrics.map((metric) => (
+                    <span key={metric.label}>
+                      <strong>{metric.value}</strong>
+                      {metric.label}
+                    </span>
+                  ))}
+                </div>
+                <div className={styles.previewQueue}>
+                  <div>
+                    <strong>Pending Staff Signups</strong>
+                    <span>Approve accounts before workspace access</span>
+                  </div>
+                  <button type="button">Approve</button>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.taskMiniGallery}>
+              {taskGallery.map(({ title, text, icon: Icon, tone }) => (
+                <div key={title} className={`${styles.taskMiniCard} ${styles[tone]}`}>
+                  <Icon />
+                  <div>
+                    <strong>{title}</strong>
+                    <span>{text}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className={styles.taskWorkflowStrip}>
+              <div>
+                <FaTasks />
+                <strong>Review Pipeline</strong>
+                <span>To Do</span>
+                <span>In Progress</span>
+                <span>Approved</span>
+              </div>
+              <div>
+                <FaUsers />
+                <strong>Staff Directory</strong>
+                <span>Department 1</span>
+                <span>IT department</span>
+                <span>Finance</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
         <div className={styles.projectGrid}>
           {projects.map((project) => (
             <article key={project.title} className={styles.projectCard}>
@@ -342,10 +591,76 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
+                {project.href && (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.projectCardLink}
+                  >
+                    Open project
+                    <FaExternalLinkAlt />
+                  </a>
+                )}
               </div>
             </article>
           ))}
         </div>
+
+        <article id="game" className={styles.gameShowcase}>
+          <div className={styles.gameMedia}>
+            <Image
+              src="/assets/game.png"
+              alt="Game Expo main menu showing a teacher facing a student transformed into a werewolf"
+              width={1920}
+              height={1080}
+              className={styles.gameImage}
+            />
+            <div className={styles.gameOverlay}>
+              <FaGamepad />
+              <span>Unity School Game Expo Project</span>
+            </div>
+          </div>
+
+          <div className={styles.gameCopy}>
+            <span className={styles.spotlightEyebrow}>School Game Expo</span>
+            <h3>Game Expo</h3>
+            <p>
+              I built this Unity game for our school Game Expo. It was intended
+              for students and follows a teacher who must save a student after
+              the student transforms into a werewolf.
+            </p>
+            <p>
+              The story centers on the teacher&apos;s mission to defeat the
+              student&apos;s inner monster, destroy the darkness taking over,
+              and save the student&apos;s life.
+            </p>
+            <div className={styles.gameStoryList}>
+              {gameStoryPoints.map((point) => (
+                <span key={point}>{point}</span>
+              ))}
+            </div>
+            <div className={styles.gameBuildList}>
+              {gameBuildFiles.map((file) => (
+                <span key={file}>{file}</span>
+              ))}
+            </div>
+            <a
+              href="/downloads/game-expo-windows.zip"
+              download
+              className={styles.gameButton}
+              aria-label="Download the Game Expo Windows playable build"
+            >
+              Download Windows build
+              <FaDownload />
+            </a>
+            <p className={styles.gameNote}>
+              After downloading, extract the ZIP first, then open
+              <strong> Game Expo.exe</strong>. A browser-playable version needs
+              a Unity WebGL export.
+            </p>
+          </div>
+        </article>
       </section>
 
       <section id="contact" className={`${styles.section} ${styles.contactSection}`}>
@@ -362,7 +677,7 @@ export default function Home() {
             </div>
             <div className={styles.contactItem}>
               <FaPhoneAlt />
-              <a href="tel:09538350966">09538350966</a>
+              <a href="tel:09705596392">09705596392</a>
             </div>
             <div className={styles.contactItem}>
               <FaMapMarkerAlt />
@@ -371,7 +686,7 @@ export default function Home() {
           </div>
 
           <div className={styles.socialCard}>
-            <div className={styles.availabilityBadge}>Open to internships and collaborations</div>
+            <div className={styles.availabilityBadge}>Available for collaboration</div>
             <p>Find me online</p>
             <div className={styles.socialLinks}>
               <a
